@@ -158,10 +158,12 @@ $("#homepage").live( 'pageinit',function(event) {
 			    $("#cydstart").tap(function () {
 			    	var container = $("#choicecontainer");
 					var cbs = container.children("input");
+					/*
 					var index;
 					for (index = 0; index < cbs.length; ++index) {
 						$(cbs[Math.floor(Math.random() * cbs.length)]).appendTo(container);
 					}
+					*/
 			      	var randomid = Math.floor(Math.random() * cbs.length);
 			      	//console.debug(randomid);
 			      	var iterator = 0;
@@ -171,6 +173,7 @@ $("#homepage").live( 'pageinit',function(event) {
 			      			var cydresultVal = $(this).val();
 			      			$("#cydresult").text(cydresultVal);
 			      			success = cydresultVal;
+			      			return false;
 			      		} else {
 			      			iterator++;	
 			      		}                  
