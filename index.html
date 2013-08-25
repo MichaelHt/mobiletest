@@ -147,9 +147,18 @@ $("#homepage").live( 'pageinit',function(event) {
 		    </div>
 			
 
-	    	<p id="cydresult" name="cydresult"> <!-- (@TODO :add dialog to inform about result) -->
+
+<!--
+	    	<p id="cydresult" name="cydresult"> 
 	    		Result will appear HERE
 	    	</p>
+	    --><!--
+			<input type="text"  class="prefilled" placeholder="Result will appear HERE" data-theme="b" value="" readonly />
+			
+	    -->
+	    	<input name="cydresult" id="cydresult" type="button" value="Result will appear HERE" data-theme="e" data-icon="star" />
+
+
 
 	    	<button type="submit" id="cydstart" name="submit" value="submit-value" data-theme="b" data-corners="false" data-icon="check" class="ui-btn-hidden" aria-disabled="false">
 	    		Choose your destiny
@@ -171,7 +180,8 @@ $("#homepage").live( 'pageinit',function(event) {
 			      	cbs.each(function(){
 			      		if (iterator == randomid) {
 			      			var cydresultVal = $(this).val();
-			      			$("#cydresult").text(cydresultVal);
+			      			$("#cydresult").val(cydresultVal);
+			      			$("#cydresult").button("refresh");
 			      			success = cydresultVal;
 			      			return false;
 			      		} else {
