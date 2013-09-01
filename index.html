@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
 	<title>Choose Your Destiny</title><!-- Choisi pour moi --> <!-- Pile ou face multiple --> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -115,16 +115,21 @@ $("#homepage").live( 'pageinit',function(event) {
 <body> 
 <div data-role="page" id="homepage">
 	<div data-role="header">
+        <!--
+        <a data-icon="arrow-l" data-rel="back" data-direction="reverse" href="#" data-theme="a" class="ui-btn-left">
+            Back
+        </a>
+        -->
 		<h1>Add choices</h1>
 		<a href="index.html" data-icon="check" class="ui-btn-right">Save</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
 		<div id="addremove" data-role="controlgroup" data-type="horizontal" >
-					<button id="addchoice" type="button" data-icon="plus" data-mini="true" >
+					<button id="addchoice" type="button" data-role="button" data-icon="plus" data-mini="true" >
 							Add one choice
 					</button>
-					<button id="removechoice" type="button" data-icon="minus" data-mini="true" >
+					<button id="removechoice" type="button" data-role="button" data-icon="minus" data-mini="true" >
 							Remove last choice
 					</button>
 			</div>
@@ -154,13 +159,13 @@ $("#homepage").live( 'pageinit',function(event) {
 	    	</p>
 	    --><!--
 			<input type="text"  class="prefilled" placeholder="Result will appear HERE" data-theme="b" value="" readonly />
-			
+
 	    -->
 	    	<input name="cydresult" id="cydresult" type="button" value="Result will appear HERE" data-theme="e" data-icon="star" />
 
 
 
-	    	<button type="submit" id="cydstart" name="submit" value="submit-value" data-theme="b" data-corners="false" data-icon="check" class="ui-btn-hidden" aria-disabled="false">
+	    	<button data-role="button" type="submit" id="cydstart" name="submit" value="submit-value" data-theme="b" data-corners="false" data-icon="check" class="ui-btn-hidden" aria-disabled="false">
 	    		Choose your destiny
 	    	</button>
 	    	<script>
@@ -199,7 +204,7 @@ $("#homepage").live( 'pageinit',function(event) {
 
 	    	<a href="../dialog-buttons.html" data-role="button" data-inline="true" data-rel="dialog" data-transition="slidedown" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Share Result</span></span></a>
 
-	    	<input type="reset" value="Reset Button" data-icon="refresh" data-mini="true" />
+	    	<input type="reset" value="Reset Button" data-icon="refresh" data-role="button" data-mini="true" />
 		</form>
 	</div><!-- /content -->
 	
