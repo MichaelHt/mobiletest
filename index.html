@@ -21,6 +21,7 @@
             error : function (){ document.title='error'; },
             success: function (data) {
                 $('#ajax_content').html(data);
+                alert(data);
             }
         });
     }
