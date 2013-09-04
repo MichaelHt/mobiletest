@@ -11,13 +11,10 @@
 	<script src="http://www.sitoueb.fr/js/googleAnalytics.js"></script>
 <script>
 
-    $( document ).bind( "mobileinit", function() {
-        // Make your jQuery Mobile framework configuration changes here!
+    function test() {
         $.support.cors = true;
         $.mobile.allowCrossDomainPages = true;
-    });
-
-    function test() {
+        alert('test');
         $.ajax({
             url: 'addtruc.php?page=foo',
             type: 'GET',
